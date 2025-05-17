@@ -1,10 +1,28 @@
 let numeroDeMedias = 0;
+
+function ColetarNumero(mensagem) {
+    let numeroDe = 0;
+    numeroDe = Number(prompt(mensagem));
+    VerificarSeENumero(numeroDe, mensagem);
+    return numeroDe;
+}
+
+function VerificarSeENumero(numeroDe,mensagemCasoNaoSeja) {
+    if(!isNaN(numeroDe)) {
+        return numeroDe;        
+        }
+        else {
+        console.log("Deve ser numero.");
+        ColetarNumero(mensagemCasoNaoSeja);
+        }
+}
+
+
 function NumeroDeMedias() {
+    let frase = "quantas medias voce quer fazer?";
     numeroDeMedias = 0;
-
-
-    console.log("quantas medias voce quer fazer?");
-    numeroDeMedias = Number(prompt("Quantas medias voce quer fazer?"));
+    console.log(frase);
+    numeroDeMedias = ColetarNumero(frase);
     console.log(numeroDeMedias + " medias");
     return numeroDeMedias;
 }
@@ -28,8 +46,9 @@ function CalculoDeMedias() {
 let numeroDeMedianas =  0;
 
 function NumeroDeMedianas()  {
+    let frase = "Qual onumero de medianas";
     numeroDeMedianas = 0;
-    numeroDeMedianas = Number(prompt("Qual onumero de medianas"));
+    numeroDeMedianas = ColetarNumero(frase);
     console.log(numeroDeMedianas);
     return numeroDeMedianas;
 }
@@ -40,7 +59,7 @@ function CalculoDeMedianas() {
     Medianas = [];
 
     for (let i =  1;i <= numeroDeMedianas;i++ ) {
-        
+
     }
 }
 
