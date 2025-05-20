@@ -1,9 +1,15 @@
 let numeroDeMedias = 0;
 
+function MostrarNoSite(idDoElemento, oqueQuerMostrar) {
+    let mostrarNoSite = document.getElementById(idDoElemento);
+    mostrarNoSite.textContent = oqueQuerMostrar;
+}
+
 function ColetarNumero(mensagem) {
     let numeroDe = 0;
-    numeroDe = Number(prompt(mensagem));
+    numeroDe = prompt(mensagem);
     VerificarSeENumero(numeroDe, mensagem);
+    numeroDe = Number(numeroDe);
     return numeroDe;
 }
 
@@ -24,6 +30,9 @@ function NumeroDeMedias() {
     console.log(frase);
     numeroDeMedias = ColetarNumero(frase);
     console.log(numeroDeMedias + " medias");
+
+    MostrarNoSite("resultadoMediaNumero", numeroDeMedias)
+
     return numeroDeMedias;
 }
 
@@ -41,6 +50,7 @@ function CalculoDeMedias() {
     }
     mediaResultado = somaDasMedias / numeroDeMedias;
     console.log(mediaResultado);
+    
 }
 
 let numeroDeMedianas =  0;
@@ -50,6 +60,9 @@ function NumeroDeMedianas()  {
     numeroDeMedianas = 0;
     numeroDeMedianas = ColetarNumero(frase);
     console.log(numeroDeMedianas);
+
+    MostrarNoSite("resultadoMedianaNumero", numeroDeMedianas)
+
     return numeroDeMedianas;
 }
 
